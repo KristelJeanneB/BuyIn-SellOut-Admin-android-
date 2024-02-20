@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CategoryFragment">
+
+    <TextView
+        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:text="Brands"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="ID"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Name"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Slug"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Status"
+            android:textStyle="bold"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="Action"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="1"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="Samsung"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10sp"
+            android:text="samsung"
+            android:textColor="@color/black"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="10dp"
+            android:layout_gravity="left|center"
+            android:src="@drawable/check" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:src="@drawable/edit"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delete"
+            android:backgroundTint="@color/white"/>
+
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="2"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="Oppo"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="oppo"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/wrong" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/edit"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delete"
+            android:backgroundTint="@color/white"/>
+
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="3"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="One Plus"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="one-plus"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/check" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/edit"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delete"
+            android:backgroundTint="@color/white"/>
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="4"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="Apple"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="apple"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/check" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/edit"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delete"
+            android:backgroundTint="@color/white"/>
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="5"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="John Players"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="john-players"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/check" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/edit"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delete"
+            android:backgroundTint="@color/white"/>
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="10sp"
+            android:text="6"
+            android:textColor="@color/black"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="Flying Maching"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="Flying-maching"
+            android:textStyle="normal"
+            android:layout_gravity="left"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/check" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/edit"
+            android:backgroundTint="@color/white"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/delete"
+            android:backgroundTint="@color/white"/>
+
+
+
+    </TableRow>
+</TableLayout>
