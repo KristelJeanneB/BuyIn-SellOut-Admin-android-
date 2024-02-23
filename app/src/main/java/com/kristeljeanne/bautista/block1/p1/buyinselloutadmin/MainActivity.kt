@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_orders -> replaceFragment(OrdersFragment())
             R.id.nav_discount -> replaceFragment(DiscountFragment())
             R.id.nav_users -> replaceFragment(UsersFragment())
-            R.id.nav_pages -> replaceFragment(PagesFragment())
+            R.id.nav_pages -> replaceFragment(SignupFragment())
             R.id.nav_logout -> Toast.makeText(this, "Logout", Toast.LENGTH_LONG).show()
 
 
