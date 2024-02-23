@@ -12,7 +12,7 @@ import android.widget.Toast
 import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.Api.RetrofitClient
 import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.databinding.FragmentSignupBinding
 import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.model.DefaultResponse
-import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.model.Response
+
 import retrofit2.Call
 import retrofit2.Callback
 import java.io.StringReader

@@ -12,7 +12,7 @@ object RetrofitClient {
 
 
 
-    private const val BASE_URL = "https://192.168.100.16:8000/api/"
+    private const val BASE_URL = "https://192.168.84.74:8000/api/"
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->

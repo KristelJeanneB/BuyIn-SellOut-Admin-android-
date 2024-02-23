@@ -1,59 +1,98 @@
 package com.kristeljeanne.bautista.block1.p1.buyinselloutadmin
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.JsonReader
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.Api.RetrofitClient
+import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.databinding.FragmentLoginBinding
+import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.databinding.FragmentSignupBinding
+import com.kristeljeanne.bautista.block1.p1.buyinselloutadmin.model.DefaultResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import java.io.StringReader
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [LoginFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LoginFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding: FragmentLoginBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
-    }
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        binding.loginButton.setOnClickListener {
+            val email = binding.logemail.text.toString()
+            val password = binding.logpassword.text.toString()
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LoginFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LoginFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+            val signinDataJson =
+                "{\"email\":\"$email\",\"password\":\"$password\"}"
+
+            if (email.isEmpty()) {
+                binding.logemail.error = "Email required"
+                binding.logemail.requestFocus()
             }
+
+            if (password.toString().isEmpty()) {
+                binding.logpassword.error = "Password required"
+                binding.logpassword.requestFocus()
+            }
+            try {
+                val reader = JsonReader(StringReader(signinDataJson))
+                reader.isLenient = true
+                reader.beginObject()
+                reader.close()
+                RetrofitClient.instance.login(email, password).enqueue(object :
+                    Callback<DefaultResponse> {
+                    override fun onFailure(call: Call<DefaultResponse>, t: Throwable) {
+                        Toast.makeText(requireContext(), t.message, Toast.LENGTH_LONG).show()
+                    }
+
+                    override fun onResponse(
+                        call: Call<DefaultResponse>,
+                        response: Response<DefaultResponse>
+                    ) {
+                        if (response.isSuccessful && response.body() != null) {
+                            // Handle successful response
+                            Toast.makeText(
+                                requireContext(),
+                                response.body()!!.message,
+                                Toast.LENGTH_LONG
+                            ).show()
+                            startActivity(
+                                Intent(requireActivity(), MainActivity::class.java)
+                            )
+                        } else {
+                            // Handle unsuccessful response
+                            val errorMessage: String = try {
+                                response.errorBody()?.string()
+                                    ?: "Failed to get a valid response. Response code: ${response.code()}"
+                            } catch (e: Exception) {
+                                "Failed to get a valid response. Response code: ${response.code()}"
+                            }
+                            Toast.makeText(requireContext(), errorMessage, Toast.LENGTH_LONG)
+                                .show()
+                            Log.e("API_RESPONSE", errorMessage)
+                        }
+                    }
+                })
+            } catch (e: Exception) {
+                // Handle exception
+                e.printStackTrace()
+            }
+
+
+        }
+
+    return binding.root
     }
 }
