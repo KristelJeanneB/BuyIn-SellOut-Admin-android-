@@ -52,7 +52,7 @@
                 android:id="@+id/email"
                 android:background="@drawable/custom_edittext"
                 android:layout_marginTop="20dp"
-                android:inputType="textPassword"
+                android:inputType="textEmailAddress"
                 android:padding="8dp"
                 android:hint="email"
                 android:drawableLeft="@drawable/baseline_alternate_email_24"

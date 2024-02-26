@@ -12,7 +12,7 @@ object RetrofitClient {
 
 
 
-    private const val BASE_URL = "https://192.168.84.74:8000/api/"
+    private const val BASE_URL = "https://buyin-n-sellout-dd59ae5ce084.herokuapp.com/"
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->

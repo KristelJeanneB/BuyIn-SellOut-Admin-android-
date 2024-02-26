@@ -57,4 +57,11 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp:4.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.5.0")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+
+    //recyclerview
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    //CardView
+    implementation("androidx.cardview:cardview:1.0.0")
 }
