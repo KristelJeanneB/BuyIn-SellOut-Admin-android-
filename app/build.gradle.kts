@@ -52,9 +52,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
 
     //retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.5.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
-    implementation ("com.squareup.okhttp3:okhttp:4.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
     implementation("com.squareup.retrofit2:converter-gson:2.5.0")
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
@@ -64,4 +64,21 @@ dependencies {
 
     //CardView
     implementation("androidx.cardview:cardview:1.0.0")
+
+    //material
+    implementation("com.google.android.material:material:1.11.0")
+
+    //lifecycle
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+
+
+    // coroutine
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+
+    //glide
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+
+
 }

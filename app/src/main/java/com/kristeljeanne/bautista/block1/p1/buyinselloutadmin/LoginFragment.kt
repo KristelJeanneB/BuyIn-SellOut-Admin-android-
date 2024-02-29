@@ -69,7 +69,7 @@ class LoginFragment : Fragment() {
                                 Toast.LENGTH_LONG
                             ).show()
                             startActivity(
-                                Intent(requireActivity(), MainActivity::class.java)
+                                Intent(requireActivity(), DashboardFragment::class.java)
                             )
                         } else {
                             // Handle unsuccessful response
@@ -86,12 +86,13 @@ class LoginFragment : Fragment() {
                     }
                 })
             } catch (e: Exception) {
-                // Handle exception
+                Toast.makeText(requireContext(), "Error parsing JSON", Toast.LENGTH_SHORT).show()
                 e.printStackTrace()
             }
 
 
         }
+
 
     return binding.root
     }

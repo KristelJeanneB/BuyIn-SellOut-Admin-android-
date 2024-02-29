@@ -41,4 +41,11 @@ object RetrofitClient {
 
         retrofit.create(Api::class.java)
     }
+
+    fun getRetrofit(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 }

@@ -20,7 +20,7 @@ class DashboardFragment : Fragment() {
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
 
         binding.cardView2.setOnClickListener{
-            val kidsFragment = KidsFragment()
+            val kidsFragment = GetFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, kidsFragment)
                 .addToBackStack(null)
